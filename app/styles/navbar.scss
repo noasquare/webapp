@@ -12,6 +12,7 @@
 
   .menu-icon {
     align-self: center;
+    transition: all .5s;
   }
 
   .menu-icon i {
@@ -70,10 +71,15 @@
 
   }
 
-  .searching .header, & .searching .menu {
-    transform: translateY(80px);
-    opacity: 0;
+
+  .searching{
+    .header,  .menu, .menu-icon {
+      transform: translateY(80px);
+      opacity: 0;
+    }
   }
+
+
 
 
 }
@@ -101,6 +107,11 @@
 
     .search-icon{
       flex-grow: 0;
+
+    }
+    .searching ~ .search-form {
+      transform: translateY(-40px);
+      opacity: 1;
 
     }
   }
